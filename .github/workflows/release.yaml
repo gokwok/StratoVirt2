@@ -1,7 +1,7 @@
 name: Build and release static stratovirt
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build-stratovirt-x86_64:
