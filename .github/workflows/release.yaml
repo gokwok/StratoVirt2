@@ -1,7 +1,7 @@
 name: Build and release static stratovirt
 on:
   release:
-    types: [created]
+    types: [released]
 
 jobs:
   build-stratovirt-x86_64:
@@ -84,6 +84,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Download artifact x86_64
         uses: actions/download-artifact@v3
         with:
