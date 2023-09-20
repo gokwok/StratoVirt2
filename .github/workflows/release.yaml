@@ -117,8 +117,6 @@ jobs:
 
       - name: Upload release asset x86_64
         uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./stratovirt-static-x86_64.tar.gz
@@ -127,8 +125,6 @@ jobs:
 
       - name: Upload release asset aarch64
         uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./stratovirt-static-aarch64.tar.gz
